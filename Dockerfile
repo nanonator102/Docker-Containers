@@ -5,13 +5,13 @@
 # ----------------------------------
 FROM openjdk:8-jdk-alpine
 
-MAINTAINER nanonator102, <nanonator102#1542>
+MAINTAINER Pterodactyl Software, <support@pterodactyl.io>
 
 RUN apk add --no-cache --update curl ca-certificates openssl git tar bash sqlite fontconfig \
-  && adduser --disabled-password --home /home/container container
+    && adduser --disabled-password --home /home/container container
 
 USER container
-ENV USER=container HOME=/home/container
+ENV  USER=container HOME=/home/container
 
 WORKDIR /home/container
 
